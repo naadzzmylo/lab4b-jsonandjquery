@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Collection</title>
+</head>
+<body>
+  <h1>Book Collection</h1>
+
+
+  <script>
+    // JSON data of the books
+    const booksData = {
+      "books": [
+        {
+          "title": "The Great Gatsby",
+          "author": "F. Scott Fitzgerald",
+          "publicationYear": 1925,
+          "genres": ["Fiction", "Classics"]
+        },
+        {
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "publicationYear": 1960,
+          "genres": ["Fiction", "Coming-of-Age"]
+        }
+      ]
+    };
+
+    // (a) Title of the first book
+    console.log("Title of the First Book:", booksData.books[0].title);
+
+    // (b) Author of the second book
+    console.log("Author of the Second Book:", booksData.books[1].author);
+
+    // (c) Genres of all books
+    console.log("Genres of All Books:");
+    booksData.books.forEach(book => {
+      console.log(`Genres of "${book.title}":`);
+      book.genres.forEach(genre => {
+        console.log(genre);
+      });
+    });
+  </script>
+</body>
+</html>
